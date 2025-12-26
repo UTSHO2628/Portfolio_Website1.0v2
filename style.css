@@ -248,7 +248,7 @@ nav {
 .project-card { display: flex; flex-direction: column; }
 .project-card h4 { font-size: 1.3rem; color: var(--secondary-accent); margin-top: 0; }
 .project-card p { flex-grow: 1; margin-bottom: 1.5rem; }
-.project-card .repo-link { display: inline-block; padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 6px; font-weight: 600; align-self: flex-start; background: rgba(255,255,255,0.05); }
+.project-card .repo-link { display: inline-block; padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 6px; font-weight: 600; align-self: flex-start; background: rgba(255,255,255,0.05); position: relative; z-index: 1; }
 .project-card .repo-link:hover { background-color: var(--secondary-accent); color: var(--bg-color); border-color: var(--secondary-accent); text-shadow: none; }
 
 .project-image {
