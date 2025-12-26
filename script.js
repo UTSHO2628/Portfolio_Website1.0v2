@@ -80,19 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Dynamic Project Loading ---
     const softwareProjects = [
         {
-            name: "AI-Powered Automation Workflow",
-            description: "Developed a custom n8n workflow using NLP to parse incoming emails, extract intent, and automatically trigger actions in a CRM system, reducing manual data entry by 90%.",
-            repoLink: "https://github.com/Utsho25"
+            name: "Python OpenCV Object Detection Project",
+            description: "This project uses OpenCV to detect various real-world objects through a live camera feed. It is capable of identifying objects such as people, books, mobile phones, televisions, pens, and more, demonstrating practical computer vision implementation in Python.",
+            repoLink: "https://github.com/UTSHO2628/Python-Open-CV-Project1"
         },
         {
-            name: "Real-Time Object Detection API",
-            description: "Built a Python-based REST API using FastAPI and OpenCV that processes video streams to detect and classify objects in real-time with high accuracy.",
-            repoLink: "https://github.com/Utsho25"
+            name: "Educational Query & Resource Management System (EduQuery)",
+            description: "EduQuery is a web-based Educational Query & Resource Management System designed to streamline communication and resource sharing among students, teachers, and administrators within academic institutions. The system improves information accessibility, reduces response time, and enhances academic collaboration.",
+            repoLink: "https://github.com/UTSHO2628/Eduquery-SD1_Project-"
         },
         {
-            name: "Laravel E-commerce Platform",
-            description: "A full-featured e-commerce site with product management, user authentication, and a complete checkout system, built with the Laravel PHP framework.",
-            repoLink: "https://github.com/Utsho25"
+            name: "NUBTK Campus Bot v1.0",
+            description: "Campus Assistant Bot is an intelligent, Python-based application developed to simplify student interaction with campus services. By automating responses to frequently asked questions, the bot reduces administrative workload and provides students with instant access to essential campus-related information.",
+            repoLink: "https://github.com/UTSHO2628/NUBTK_Campus_Bot_v1.0"
+        },
+        {
+            name: "GreenLife Project v1.0",
+            description: "GreenLife is a carbon footprint calculator application that allows users to input various values related to daily activities and instantly calculate their environmental impact. The project aims to promote environmental awareness and sustainable living through technology.",
+            repoLink: "https://github.com/UTSHO2628/GreenLife_Project_V1.0"
         }
     ];
 
@@ -114,26 +119,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createProjectCard(project, isHardware = false) {
         const card = document.createElement('div');
-        // Add 'interactive-card' class for the 3D tilt effect
         card.className = 'project-card interactive-card';
-        
-        let content = '';
 
         if (isHardware) {
             if (project.image) {
-                content += `<img src="${project.image}" alt="${project.title}" class="project-image">`;
+                const img = document.createElement('img');
+                img.src = project.image;
+                img.alt = project.title;
+                img.className = 'project-image';
+                card.appendChild(img);
             } else {
-                content += `<div class="hardware-placeholder">Image Coming Soon</div>`;
+                const placeholder = document.createElement('div');
+                placeholder.className = 'hardware-placeholder';
+                placeholder.textContent = 'Image Coming Soon';
+                card.appendChild(placeholder);
             }
-            content += `<h4>${project.title}</h4>`;
-            content += `<p>${project.purpose}</p>`;
+            const title = document.createElement('h4');
+            title.textContent = project.title;
+            card.appendChild(title);
+            const purpose = document.createElement('p');
+            purpose.textContent = project.purpose;
+            card.appendChild(purpose);
         } else {
-            content += `<h4>${project.name}</h4>`;
-            content += `<p>${project.description}</p>`;
-            content += `<a href="${project.repoLink}" target="_blank" class="repo-link">View on GitHub</a>`;
+            const title = document.createElement('h4');
+            title.textContent = project.name;
+            card.appendChild(title);
+            const description = document.createElement('p');
+            description.textContent = project.description;
+            card.appendChild(description);
+            const link = document.createElement('a');
+            link.href = project.repoLink;
+            link.target = '_blank';
+            link.className = 'repo-link';
+            link.textContent = 'View on GitHub';
+            card.appendChild(link);
         }
         
-        card.innerHTML = content;
         return card;
     }
 
@@ -153,6 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const interactiveCards = document.querySelectorAll('.interactive-card, .skill-card, .achievement-item');
     interactiveCards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
+            if (e.target.classList.contains('repo-link')) {
+                return;
+            }
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
