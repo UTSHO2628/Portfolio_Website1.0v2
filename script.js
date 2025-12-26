@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const roles = [
         "Python Programming Trainer",
         "AI & Automation Expert",
-        "Laravel & Web Developer",
-        "Robotics & Hardware Builder",
+        "Web Developer",
+        "Robotics & Hardware project Builder",
         "CSE Student"
     ];
     let roleIndex = 0;
