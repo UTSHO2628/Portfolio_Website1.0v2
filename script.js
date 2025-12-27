@@ -105,12 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Multi-Protocol Wireless Security Toolkit",
             purpose: "MPWST V1 is a portable ESP32-powered hardware platform capable of scanning, analyzing, and visualizing WiFi, BLE, and RF signals in real time.",
-            image: "Hd11.png"
+            image: "Hd1.png"
         },
         {
             title: "Obstacle-Avoiding Rover",
             purpose: "An intelligent rover designed to autonomously navigate complex environments, featuring real-time obstacle detection and avoidance using a custom ultrasonic sensor array.",
-            image: "project 2.jpeg"
+            image: "Hd2.png"
         }
     ];
 
