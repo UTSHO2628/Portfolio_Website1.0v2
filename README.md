@@ -42,6 +42,7 @@ CSS3
 
 Vanilla JavaScript
 
+
 Animations & UI
 
 Canvas-based particle animation
@@ -64,6 +65,7 @@ PHP
 
 JavaScript
 
+
 Web Development
 
 HTML & CSS
@@ -75,6 +77,7 @@ Django
 Flask
 
 FastAPI
+
 
 AI & Automation
 
@@ -88,6 +91,7 @@ n8n Workflows
 
 Python scheduling & automation tools
 
+
 Hardware & Robotics
 
 Raspberry Pi
@@ -99,6 +103,7 @@ RC systems
 Custom sensors
 
 Circuit design
+
 
 Tools & Platforms
 
@@ -168,6 +173,7 @@ Serve as a continuously evolving personal brand
 
 Suggestions and feedback are always welcome.
 If you find this portfolio inspiring, feel free to ⭐ the repository.
+
 
 
 
