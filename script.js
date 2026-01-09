@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typing Animation ---
     const roles = [
         "Python Programming Trainer",
-        "AI & Automation Expert",
+        "AI & Automation",
         "Web Developer",
         "Robotics & Hardware project Builder",
         "CSE Student"
